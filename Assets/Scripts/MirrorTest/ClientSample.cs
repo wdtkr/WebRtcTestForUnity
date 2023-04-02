@@ -1,19 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using Mirror;
-using MirrorTest;
 using UnityEngine;
 
-public class ClientSample : MonoBehaviour
+namespace MirrorTest
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ClientSample : MonoBehaviour
     {
-        NetworkClient.RegisterHandler<SendData>(ReceivedInfo);
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
+            NetworkClient.RegisterHandler<SendData>(ReceivedInfo);
+        }
 
-    private void ReceivedInfo(SendData receivedData)
-    {
-        Debug.Log(JsonUtility.ToJson(receivedData));
+        private void ReceivedInfo(SendData receivedData)
+        {
+            Debug.Log(JsonUtility.ToJson(receivedData));
+        }
     }
 }

@@ -1,10 +1,9 @@
 using Mirror;
 using UnityEngine;
 
-
 namespace MirrorTest
 {
-    public class SeverSample : NetworkBehaviour
+    public class ServerSample : NetworkBehaviour
     {
         private void Update()
         {
