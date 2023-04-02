@@ -1,16 +1,16 @@
+using System;
+using Mirror;
 using UnityEngine;
 using Unity.WebRTC;
 
-public class WebRtcScript : MonoBehaviour
+public class WebRtcScript : NetworkBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void FixedUpdate()
     {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (isClient) {
+            // Debug.Log("クライアントとして接続しました");
+        }else if (isServer) {
+            // Debug.Log("サーバーとして接続しましたあ");
+        }
     }
 }
